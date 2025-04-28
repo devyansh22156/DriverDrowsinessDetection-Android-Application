@@ -1,0 +1,428 @@
+package com.example.drowsinessdetector
+
+import android.Manifest
+import android.graphics.Bitmap
+import android.os.Bundle
+import android.util.Log
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.camera.core.*
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
+import com.example.drowsinessdetector.ui.theme.DrowsinessDetectorTheme
+import kotlinx.coroutines.*
+
+class MainActivity : ComponentActivity() {
+
+    private val TAG = "MainActivity"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Request camera + internet
+        requestPermissions(arrayOf(Manifest.permission.CAMERA, Manifest.permission.INTERNET), 0)
+
+        setContent {
+            DrowsinessDetectorTheme {
+                var resultText by remember { mutableStateOf("Waiting for prediction...") }
+                var errorText  by remember { mutableStateOf("") }
+                var isAuto     by remember { mutableStateOf(false) }
+
+                val context        = LocalContext.current
+                val lifecycleOwner = LocalLifecycleOwner.current
+
+                // 1) Create & remember your 3 use‑cases:
+                val preview = remember {
+                    Preview.Builder().build()
+                }
+                val imageCapture = remember {
+                    ImageCapture.Builder()
+                        .setTargetRotation(windowManager.defaultDisplay.rotation)
+                        .build()
+                }
+                val imageAnalysis = remember {
+                    ImageAnalysis.Builder()
+                        .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                        .build()
+                }
+
+                // 2) Bind all use‑cases once
+                LaunchedEffect(preview, imageCapture, imageAnalysis) {
+                    try {
+                        val cameraProvider = ProcessCameraProvider.getInstance(context).get()
+                        cameraProvider.unbindAll()
+                        val selector = CameraSelector.DEFAULT_FRONT_CAMERA
+
+                        cameraProvider.bindToLifecycle(
+                            lifecycleOwner,
+                            selector,
+                            preview,
+                            imageCapture,
+                            imageAnalysis
+                        )
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Camera init failed", e)
+                        errorText = "Camera init error: ${e.message}"
+                    }
+                }
+
+                // 3) Hook up the analyzer for auto‑mode
+                DisposableEffect(imageAnalysis, isAuto) {
+                    if (isAuto) {
+                        imageAnalysis.setAnalyzer(
+                            ContextCompat.getMainExecutor(context)
+                        ) { imageProxy ->
+                            // Send to server…
+                            try {
+                                val bmp = imageProxy.toBitmap()
+                                CoroutineScope(Dispatchers.IO).launch {
+                                    try {
+                                        val res = ApiClient.sendBitmapToServer(bmp)
+                                        withContext(Dispatchers.Main) {
+                                            if (res != null) {
+                                                resultText = "${res.label} (${res.confidence.toInt()}%)"
+                                                errorText = ""
+                                            } else {
+                                                resultText = "Prediction failed"
+                                                errorText = "No response"
+                                            }
+                                        }
+                                    } catch (e: Exception) {
+                                        withContext(Dispatchers.Main) {
+                                            resultText = "Error occurred"
+                                            errorText = e.message ?: e.toString()
+                                        }
+                                    }
+                                }
+                            } catch (e: Exception) {
+                                errorText = "Frame→Bitmap error: ${e.message}"
+                            } finally {
+                                imageProxy.close()
+                            }
+                        }
+                    } else {
+                        imageAnalysis.clearAnalyzer()
+                    }
+                    onDispose { imageAnalysis.clearAnalyzer() }
+                }
+
+                // 4) UI
+                Column(modifier = Modifier.fillMaxSize()) {
+                    CameraPreviewView(
+                        preview = preview,
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxWidth()
+                    )
+
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(resultText, style = MaterialTheme.typography.bodyLarge)
+                        if (errorText.isNotEmpty()) {
+                            Text(
+                                errorText,
+                                color = MaterialTheme.colorScheme.error,
+                                modifier = Modifier.padding(top = 4.dp)
+                            )
+                        }
+
+                        Spacer(Modifier.height(16.dp))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceEvenly,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Button(onClick = {
+                                // one‑off capture
+                                imageCapture.takePicture(
+                                    ContextCompat.getMainExecutor(context),
+                                    object : ImageCapture.OnImageCapturedCallback() {
+                                        override fun onCaptureSuccess(image: ImageProxy) {
+                                            val bmp = image.toBitmap()
+                                            image.close()
+
+                                            CoroutineScope(Dispatchers.IO).launch {
+                                                withContext(Dispatchers.Main) {
+                                                    resultText = "Processing..."
+                                                    errorText = ""
+                                                }
+                                                try {
+                                                    val res = ApiClient.sendBitmapToServer(bmp)
+                                                    withContext(Dispatchers.Main) {
+                                                        if (res != null) {
+                                                            resultText = "${res.label} (${res.confidence.toInt()}%)"
+                                                        } else {
+                                                            resultText = "Prediction failed"
+                                                            errorText = "No response"
+                                                        }
+                                                    }
+                                                } catch (e: Exception) {
+                                                    withContext(Dispatchers.Main) {
+                                                        resultText = "Error occurred"
+                                                        errorText = e.message ?: e.toString()
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        override fun onError(exc: ImageCaptureException) {
+                                            errorText = "Capture error: ${exc.message}"
+                                        }
+                                    }
+                                )
+                            }) {
+                                Text("Capture & Detect")
+                            }
+
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("Auto Detect")
+                                Switch(
+                                    checked = isAuto,
+                                    onCheckedChange = { isAuto = it },
+                                    modifier = Modifier.padding(start = 8.dp)
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# --------------------------------------------------------------------------------------------------
+
+package com.example.drowsinessdetector
+
+import android.Manifest
+import android.graphics.Bitmap
+import android.os.Bundle
+import android.util.Log
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.camera.core.*
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
+import com.example.drowsinessdetector.ui.theme.DrowsinessDetectorTheme
+import kotlinx.coroutines.*
+
+class MainActivity : ComponentActivity() {
+
+    private val TAG = "MainActivity"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Request camera + internet permissions
+        requestPermissions(arrayOf(Manifest.permission.CAMERA, Manifest.permission.INTERNET), 0)
+
+        setContent {
+            DrowsinessDetectorTheme {
+                var resultText by remember { mutableStateOf("Waiting for prediction...") }
+                var errorText  by remember { mutableStateOf("") }
+                var isAuto     by remember { mutableStateOf(false) }
+
+                // Throttle interval between auto frames (milliseconds)
+                val throttleInterval = 500L
+                var lastSentTime by remember { mutableStateOf(0L) }
+
+                val context        = LocalContext.current
+                val lifecycleOwner = LocalLifecycleOwner.current
+
+                // 1) Create & remember your 3 use‑cases:
+                val preview = remember { Preview.Builder().build() }
+                val imageCapture = remember {
+                    ImageCapture.Builder()
+                        .setTargetRotation(windowManager.defaultDisplay.rotation)
+                        .build()
+                }
+                val imageAnalysis = remember {
+                    ImageAnalysis.Builder()
+                    ImageAnalysis.Builder()
+                        .setTargetRotation(windowManager.defaultDisplay.rotation)
+                        .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
+                        .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                        .build()
+                }
+
+                // 2) Bind use‑cases
+                LaunchedEffect(preview, imageCapture, imageAnalysis) {
+                    try {
+                        val cameraProvider = ProcessCameraProvider.getInstance(context).get()
+                        cameraProvider.unbindAll()
+                        cameraProvider.bindToLifecycle(
+                            lifecycleOwner,
+                            CameraSelector.DEFAULT_FRONT_CAMERA,
+                            preview,
+                            imageCapture,
+                            imageAnalysis
+                        )
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Camera init failed", e)
+                        errorText = "Camera init error: ${e.message}"
+                    }
+                }
+
+                // 3) Auto‑detect analyzer with throttle & delay
+                DisposableEffect(imageAnalysis, isAuto) {
+                    val scope = CoroutineScope(Dispatchers.IO + Job())
+
+                    if (isAuto) {
+                        imageAnalysis.setAnalyzer(ContextCompat.getMainExecutor(context)) { imageProxy ->
+                            val now = System.currentTimeMillis()
+                            if (now - lastSentTime < throttleInterval) {
+                                imageProxy.close()
+                                return@setAnalyzer
+                            }
+                            lastSentTime = now
+
+                            val bmp = try {
+                                imageProxy.toBitmap()
+                            } catch (e: Exception) {
+                                errorText = "Frame→Bitmap error: ${e.message}"
+                                imageProxy.close()
+                                return@setAnalyzer
+                            }
+                            imageProxy.close()
+
+                            scope.launch {
+                                delay(100)  // ensure encoding is settled
+                                try {
+                                    val res = ApiClient.sendBitmapToServer(bmp)
+                                    withContext(Dispatchers.Main) {
+                                        if (res != null) {
+                                            resultText = "${res.label} (${res.confidence.toInt()}%)"
+                                            errorText = ""
+                                        } else {
+                                            resultText = "Prediction failed"
+                                            errorText = "No response"
+                                        }
+                                    }
+                                } catch (e: Exception) {
+                                    withContext(Dispatchers.Main) {
+                                        resultText = "Error occurred"
+                                        errorText = e.message ?: e.toString()
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        imageAnalysis.clearAnalyzer()
+                    }
+
+                    onDispose {
+                        scope.cancel()
+                        imageAnalysis.clearAnalyzer()
+                    }
+                }
+
+                // 4) UI
+                Column(modifier = Modifier.fillMaxSize()) {
+                    CameraPreviewView(
+                        preview = preview,
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxWidth()
+                    )
+
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(resultText, style = MaterialTheme.typography.bodyLarge)
+                        if (errorText.isNotEmpty()) {
+                            Text(
+                                errorText,
+                                color = MaterialTheme.colorScheme.error,
+                                modifier = Modifier.padding(top = 4.dp)
+                            )
+                        }
+
+                        Spacer(Modifier.height(16.dp))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceEvenly,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Button(onClick = {
+                                // one‑off capture
+                                imageCapture.takePicture(
+                                    ContextCompat.getMainExecutor(context),
+                                    object : ImageCapture.OnImageCapturedCallback() {
+                                        override fun onCaptureSuccess(image: ImageProxy) {
+                                            val bmp = image.toBitmap()
+                                            image.close()
+
+                                            CoroutineScope(Dispatchers.IO).launch {
+                                                withContext(Dispatchers.Main) {
+                                                    resultText = "Processing..."
+                                                    errorText = ""
+                                                }
+                                                try {
+                                                    val res = ApiClient.sendBitmapToServer(bmp)
+                                                    withContext(Dispatchers.Main) {
+                                                        if (res != null) {
+                                                            resultText = "${res.label} (${res.confidence.toInt()}%)"
+                                                        } else {
+                                                            resultText = "Prediction failed"
+                                                            errorText = "No response"
+                                                        }
+                                                    }
+                                                } catch (e: Exception) {
+                                                    withContext(Dispatchers.Main) {
+                                                        resultText = "Error occurred"
+                                                        errorText = e.message ?: e.toString()
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        override fun onError(exc: ImageCaptureException) {
+                                            errorText = "Capture error: ${exc.message}"
+                                        }
+                                    }
+                                )
+                            }) {
+                                Text("Capture & Detect")
+                            }
+
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("Auto Detect")
+                                Switch(
+                                    checked = isAuto,
+                                    onCheckedChange = { isAuto = it },
+                                    modifier = Modifier.padding(start = 8.dp)
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
