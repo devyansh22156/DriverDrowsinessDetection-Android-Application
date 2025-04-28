@@ -6,7 +6,7 @@ It uses a deep learning model deployed via a Flask backend and an Android app bu
 ## 📸 Features
 
 - Real-time driver monitoring via phone camera.
-- Predicts **"Alert"** or **"Drowsy"** states based on facial cues.
+- Predicts **"Non-Drowsy"**, **"Drowsy"** and **"No Face Detection"** or states based on facial cues.
 - Displays prediction confidence and extracted features.
 - Minimalistic and intuitive UI for quick usability.
 - Lightweight deep learning model combining EfficientNet and GRU for fast and accurate predictions.
