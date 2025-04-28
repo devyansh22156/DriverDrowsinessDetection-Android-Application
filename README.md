@@ -113,9 +113,9 @@ private const val BASE_URL = "http://192.168.1.5:5000/"
 
 ## 🧑‍💻 Authors
 
-- **Anikait Agrawal (2022072)** — Model Architecture and Fine Tuning
-- **Devyansh Chaudhary (2022156)** — Model, App Development, User Interface
-- **Dhawal Garg (2022160)** — Model Architecture, Literature Review
+- **Anikait Agrawal (2022072)**
+- **Devyansh Chaudhary (2022156)**
+- **Dhawal Garg (2022160)**
 
 ## 📄 License
 
