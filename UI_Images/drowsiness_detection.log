@@ -1,0 +1,687 @@
+2025-04-19 19:13:18,993 - DrowsinessDetection - INFO - Starting Drowsiness Detection Server
+2025-04-19 19:13:19,917 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.140:5000
+2025-04-19 19:13:19,917 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-19 19:13:19,979 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-19 19:13:21,183 - DrowsinessDetection - INFO - Starting Drowsiness Detection Server
+2025-04-19 19:13:21,201 - werkzeug - WARNING -  * Debugger is active!
+2025-04-19 19:13:21,223 - werkzeug - INFO -  * Debugger PIN: 837-305-653
+2025-04-19 19:13:21,411 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:21,885 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:21,895 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:21,897 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:21] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:21,943 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:21,974 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:22,002 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070201.jpg
+2025-04-19 19:13:22,075 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:22,083 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:22,088 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:22] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:22,196 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:22,374 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:22,394 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:22,396 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:22] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:22,405 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:22,414 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:22,416 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:22] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:22,478 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:22,521 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:22,593 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:22,621 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:22,630 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:22,633 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:22] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:22,697 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:22,988 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:22,989 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,028 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,081 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,087 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,094 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,105 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,121 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,131 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,134 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,168 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,176 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,178 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,191 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:23,198 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070203.jpg
+2025-04-19 19:13:23,215 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:23,215 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:23,277 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:23,352 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,377 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,389 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,458 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:23,475 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070203.jpg
+2025-04-19 19:13:23,629 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,691 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,702 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,713 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,727 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,739 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,754 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:23,818 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:23,875 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,879 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,827 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:23,881 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,861 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:23,940 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:24,070 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:24,151 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:24,201 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:24,288 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:24,291 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070204.jpg
+2025-04-19 19:13:24,340 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:24,362 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:24] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:24,403 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:24,679 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:24,697 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:24,705 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:24] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:24,710 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:24,724 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:24,728 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:24] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:24,815 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:24,869 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:24,874 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:24] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:24,910 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:24,965 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:24,990 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:24,994 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:25,055 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:25] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:25,064 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:25,078 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:25,304 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:25,407 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:25,427 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:25,517 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:25,530 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:25,571 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070205.jpg
+2025-04-19 19:13:25,574 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:25] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:25,578 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:25] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:25,598 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:25,655 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:25,930 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:25] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:25,973 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:25,985 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:26,037 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:26,105 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:26,136 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:26,147 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:26] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:26,231 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:26,422 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:26] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:26,454 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070206.jpg
+2025-04-19 19:13:26,477 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:26,508 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:26,558 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:26,613 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:26] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:26,700 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:26,754 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:26,819 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070206.jpg
+2025-04-19 19:13:26,828 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:26,848 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:26,893 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:26,963 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:26] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:27,059 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:27,092 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:27,138 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:27,189 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:27] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:27,197 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:27] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:27,207 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:27,404 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:27,455 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:27,459 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:27,494 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:27,506 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:27,592 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:27] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:27,656 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:27,691 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:27,695 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:27,698 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:27] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:27,709 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:27,717 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:27,730 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:27] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:27,734 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:27] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:27,766 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:27,846 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:28,055 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:28,150 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070208.jpg
+2025-04-19 19:13:28,155 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:28,206 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:28,453 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:28,658 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:28,799 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:28,808 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:28,891 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:28,956 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:28] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:29,029 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:29,126 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:29] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:29,189 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:29,192 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:29] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:29,196 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:29] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:29,396 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:29,540 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070209.jpg
+2025-04-19 19:13:29,543 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:29,570 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:29,604 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:29,579 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:29,608 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:29] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:29,653 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:29,693 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070209.jpg
+2025-04-19 19:13:29,947 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:30,123 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:30,224 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:30,365 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:30] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:30,391 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:30,558 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:30,580 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:30,593 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:30] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:30,599 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:30,615 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:30,618 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:30,638 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:30] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:30,675 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:30,712 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:30,730 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:30] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:30,762 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:30,773 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:30,905 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:30,955 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:30,957 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:30] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:30,959 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:30,996 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:31,029 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:31] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:31,107 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:31,304 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:31,310 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:31,341 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:31,375 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:31,448 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:31,455 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:31,520 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:31] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:31,543 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:31] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:31,616 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:31,644 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:31,688 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:31] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:31,705 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:31,738 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:31,762 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:31] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:31,767 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:31,805 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:31,830 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070211.jpg
+2025-04-19 19:13:31,857 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:31,882 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:31,899 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:31] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:31,961 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070211.jpg
+2025-04-19 19:13:32,038 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:32,147 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:32,308 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:32,424 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:32,496 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:32] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:32,672 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:32,730 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:32,731 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:32,745 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:32] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:32,779 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:32,828 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070212.jpg
+2025-04-19 19:13:32,843 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:32,853 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:32,935 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:32,941 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:32,961 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:32,991 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:32] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:33,095 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:33] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:33,151 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:33,255 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:33,283 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:33] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:33,296 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:33,311 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:33] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:33,358 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:33,383 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:33,522 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:33,618 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070213.jpg
+2025-04-19 19:13:33,628 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:33,671 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:33,719 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:33,771 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:33,863 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:33,964 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:33] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:33,993 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:34,055 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:34] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:34,079 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:34,113 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:34,128 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:34] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:34,158 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:34,175 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:34] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:34,208 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:34,220 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:34,287 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:34,289 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:34,327 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:34,337 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:34,350 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070214.jpg
+2025-04-19 19:13:34,380 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:34] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:34,403 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070214.jpg
+2025-04-19 19:13:34,611 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:34,700 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:34,713 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:34,771 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:34] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:34,913 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,056 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,079 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,089 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,092 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:35,098 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:35,145 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:35,178 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:35,180 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,203 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:35,229 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,344 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:35,474 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,474 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,491 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,499 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,516 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:35,525 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:35,526 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:35,635 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,646 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:35,676 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,678 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:35,714 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:35,781 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,798 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:35,812 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,822 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:35,828 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:35,840 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:35,842 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:35] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,047 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:36,093 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070216.jpg
+2025-04-19 19:13:36,100 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:36,102 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,128 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,131 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,195 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,303 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,306 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,309 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,329 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:36,343 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,400 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,411 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,431 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,439 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:36,446 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,589 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:36,695 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:36,699 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,707 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,738 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,833 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,904 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,908 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,921 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,937 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:36,941 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,947 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:36,953 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:36,962 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:36] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:37,115 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:37,145 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:37,145 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:37,146 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:37,151 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:37,159 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070217.jpg
+2025-04-19 19:13:37,177 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070217.jpg
+2025-04-19 19:13:37,242 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:37,354 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:37] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:37,574 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:37,690 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:37,702 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:37,759 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:37] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:37,838 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:37,875 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:37,916 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:37,973 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:37,975 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:37,981 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:37,999 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:37] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,006 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:38,008 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,012 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,053 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:38,075 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:38,081 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,116 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:38,134 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:38,151 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:38,164 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:38,165 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070218.jpg
+2025-04-19 19:13:38,379 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:38,395 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:38,413 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,589 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:38,656 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:38,762 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:38,768 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:38,819 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:38,849 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:38,849 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,870 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:38,885 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:38,909 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:38,921 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,927 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,928 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:38] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:38,979 - werkzeug - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\sklearn\\frozen\\__init__.py', reloading
+2025-04-19 19:13:38,997 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:39,009 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:39,012 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:39] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:39,028 - werkzeug - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\sklearn\\frozen\\_frozen.py', reloading
+2025-04-19 19:13:39,285 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:39,305 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:39,309 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:39,309 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:39,310 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:39,344 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070219.jpg
+2025-04-19 19:13:39,397 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070219.jpg
+2025-04-19 19:13:39,408 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070219.jpg
+2025-04-19 19:13:39,447 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:39,461 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:39,565 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:39] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:39,666 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:39,700 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:39,706 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:39,708 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:39] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:39,931 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:39,944 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:39,948 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:39,954 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:39,955 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:39,957 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:39] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:40,157 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-19 19:13:41,624 - DrowsinessDetection - INFO - Starting Drowsiness Detection Server
+2025-04-19 19:13:41,648 - werkzeug - WARNING -  * Debugger is active!
+2025-04-19 19:13:41,674 - werkzeug - INFO -  * Debugger PIN: 837-305-653
+2025-04-19 19:13:41,796 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:41,798 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:41,798 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:41,802 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:41,818 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:41,856 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070221.jpg
+2025-04-19 19:13:41,857 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070221.jpg
+2025-04-19 19:13:41,874 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070221.jpg
+2025-04-19 19:13:42,127 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:42,148 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:42,160 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:42] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:42,266 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:42,664 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:42,679 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:42,713 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:42,724 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:42,732 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:42,743 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:42,745 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:42] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:42,746 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:42] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:42,747 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:42] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:42,778 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:42,787 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:42,791 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:42] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:42,963 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:42,964 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:42,964 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:42,965 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:42,966 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:43,041 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:43,112 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:43] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:43,205 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:43,212 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:43,215 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:43] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:43,266 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:43,363 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:43,436 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070223.jpg
+2025-04-19 19:13:43,437 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:43,443 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:43,446 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:43,459 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:43,514 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:43,599 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:43,601 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:43] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:43,602 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:43] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:43,602 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:43,604 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:43] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:43,613 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:43,615 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:43] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:43,637 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:43,649 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:43,653 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:43] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:43,713 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:43,713 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:43,716 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:43,723 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:43,740 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070223.jpg
+2025-04-19 19:13:43,744 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:43,966 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,008 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,014 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,123 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:44,181 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,200 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,231 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,236 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,250 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,257 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,298 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,311 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,315 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,327 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,337 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,349 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,398 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:44,406 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,416 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,426 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,432 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:44,437 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:44,445 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:44,456 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070224.jpg
+2025-04-19 19:13:44,569 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:44,647 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,696 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,761 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,893 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,917 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,951 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:44,961 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:44,965 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:44,992 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:44,996 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:44] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,001 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,026 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,046 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:45] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,061 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,061 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,092 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,101 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,129 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070225.jpg
+2025-04-19 19:13:45,146 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,150 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:45] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,247 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,304 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,311 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,314 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:45] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,329 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070225.jpg
+2025-04-19 19:13:45,448 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,487 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070225.jpg
+2025-04-19 19:13:45,554 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,577 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,588 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,589 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:45] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,599 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,610 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:45] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,634 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,641 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,652 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,652 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,659 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:45] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,664 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:45] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:45,683 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,727 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,750 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070225.jpg
+2025-04-19 19:13:45,780 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,792 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070225.jpg
+2025-04-19 19:13:45,839 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:45,877 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:45,951 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:45,955 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,014 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,041 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,044 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,056 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,066 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,073 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,082 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,090 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070226.jpg
+2025-04-19 19:13:46,113 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,160 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070226.jpg
+2025-04-19 19:13:46,224 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,275 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,276 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,288 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,296 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,299 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,300 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,318 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,342 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,345 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,411 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,417 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070226.jpg
+2025-04-19 19:13:46,448 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,464 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,656 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,668 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,678 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,737 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,747 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,762 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,770 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070226.jpg
+2025-04-19 19:13:46,777 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,779 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,796 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,879 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,885 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,956 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:46,990 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:46,994 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:46] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:46,996 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:46,999 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,009 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,012 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:47,024 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,027 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,138 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:47,145 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070227.jpg
+2025-04-19 19:13:47,145 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:47,155 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:47,155 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:47,210 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070227.jpg
+2025-04-19 19:13:47,430 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:47,455 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,474 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,520 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:47,544 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,548 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:47,551 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,702 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:47,763 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:47,767 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:47,828 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,878 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,840 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:47,856 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,872 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,832 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:47,887 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:47,891 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,896 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,903 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:47] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:47,905 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070227.jpg
+2025-04-19 19:13:47,936 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:47,989 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:48,049 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:48,080 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:48,113 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:48,205 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:48,293 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:48] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:48,341 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:48,348 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:48,361 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:48] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:48,394 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:48,405 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070228.jpg
+2025-04-19 19:13:48,448 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:48,498 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:48,561 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:48,568 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:48,597 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:48,598 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:48] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:48,617 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:48,633 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:48,667 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:48] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:48,668 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:48] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:48,697 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:48,708 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:48,714 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:48] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:48,746 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:48,782 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:48,791 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,101 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,108 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:49,192 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:49,202 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:49,281 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:49,294 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:49] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:49,302 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:49] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:49,330 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:49,348 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:49,357 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:49] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:49,363 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:49,373 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:49,395 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:49,396 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:49,399 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:49] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:49,401 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:49] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:49,455 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,462 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,473 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,529 - DrowsinessDetection - DEBUG - Saved original image to debug_images\2025-04-19/orig_1745070229.jpg
+2025-04-19 19:13:49,557 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,651 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,727 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:49,747 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:49,758 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:49] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:49,890 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:49,924 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:49,969 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:49,980 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:49] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:50,074 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:50,088 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:50,088 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:50,094 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:50,106 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:50] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:50,113 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:50,125 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:50] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:50,194 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:50,206 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:50,206 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:50,212 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:50,216 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:50] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:50,216 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:50,292 - DrowsinessDetection - INFO - Detection result: {'label': 'No face detected', 'confidence': 0.0}
+2025-04-19 19:13:50,356 - werkzeug - INFO - 192.168.29.71 - - [19/Apr/2025 19:13:50] "POST /predict HTTP/1.1" 200 -
+2025-04-19 19:13:50,365 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
+2025-04-19 19:13:50,448 - DrowsinessDetection - DEBUG - Detected 0 faces
+2025-04-19 19:13:50,455 - DrowsinessDetection - DEBUG - Received image dimensions: 640x480
