@@ -2,60 +2,43 @@ package com.example.drowsinessdetector
 
 import android.Manifest
 import android.graphics.Bitmap
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.draw.clip
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.camera.core.*
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageAnalysis
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.blur
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.example.drowsinessdetector.ui.theme.DrowsinessDetectorTheme
 import kotlinx.coroutines.*
-
-// Compose foundation & layout
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-
-// Compose UI and graphics
-import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.blur
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.compose.ui.text.style.TextAlign
-
-// Compose material components
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Surface
 
 sealed class Screen {
     object Login : Screen()
@@ -65,29 +48,34 @@ sealed class Screen {
 
 class MainActivity : ComponentActivity() {
     private val TAG = "MainActivity"
+    private var mediaPlayer: MediaPlayer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Prepare alarm sound (ensure alarm.mp3 is placed in res/raw)
+        mediaPlayer = MediaPlayer.create(this, R.raw.alarm)
+        mediaPlayer?.setLooping(true)
 
         // Request permissions
         requestPermissions(arrayOf(Manifest.permission.CAMERA, Manifest.permission.INTERNET), 0)
 
         setContent {
             DrowsinessDetectorTheme {
-                // Start with login screen
                 var screen by remember { mutableStateOf<Screen>(Screen.Login) }
-                // Shared state for detection screen
                 var resultText by remember { mutableStateOf("Waiting for prediction...") }
-                var errorText  by remember { mutableStateOf("") }
-                var features   by remember { mutableStateOf<List<Float>>(emptyList()) }
-                var isAuto     by remember { mutableStateOf(false) }
+                var errorText by remember { mutableStateOf("") }
+                var features by remember { mutableStateOf<List<Float>>(emptyList()) }
+                var isAuto by remember { mutableStateOf(false) }
 
-                // Throttle interval
+                // Track drowsy timing
+                var drowsyStartTime by remember { mutableStateOf<Long?>(null) }
+
                 val throttleInterval = 500L
                 var lastSentTime by remember { mutableStateOf(0L) }
-                val context        = LocalContext.current
+                val context = LocalContext.current
                 val lifecycleOwner = LocalLifecycleOwner.current
 
-                // CameraX use‑cases
                 val preview = remember { Preview.Builder().build() }
                 val imageCapture = remember {
                     ImageCapture.Builder()
@@ -102,7 +90,7 @@ class MainActivity : ComponentActivity() {
                         .build()
                 }
 
-                // Bind camera once
+                // Bind camera
                 LaunchedEffect(preview, imageCapture, imageAnalysis) {
                     try {
                         val cameraProvider = ProcessCameraProvider.getInstance(context).get()
@@ -120,7 +108,7 @@ class MainActivity : ComponentActivity() {
                     }
                 }
 
-                // Auto‑detect analyzer
+                // Set up analyzer
                 DisposableEffect(imageAnalysis, isAuto) {
                     val scope = CoroutineScope(Dispatchers.IO + Job())
                     if (isAuto) {
@@ -144,22 +132,21 @@ class MainActivity : ComponentActivity() {
                             scope.launch {
                                 delay(100)
                                 try {
-                                    // Send to server
                                     val res = ApiClient.sendBitmapToServer(bmp)
                                     withContext(Dispatchers.Main) {
                                         if (res != null) {
                                             resultText = "${res.label} (${res.confidence.toInt()}%)"
-                                            features   = res.features  // assuming server now returns a List<Float>
-                                            errorText  = ""
+                                            features = res.features
+                                            errorText = ""
                                         } else {
                                             resultText = "Prediction failed"
-                                            errorText  = "No response"
+                                            errorText = "No response"
                                         }
                                     }
                                 } catch (e: Exception) {
                                     withContext(Dispatchers.Main) {
                                         resultText = "Error occurred"
-                                        errorText  = e.message ?: e.toString()
+                                        errorText = e.message ?: e.toString()
                                     }
                                 }
                             }
@@ -173,23 +160,37 @@ class MainActivity : ComponentActivity() {
                     }
                 }
 
-                // Top‑level navigation
-                when (screen) {
-                    is Screen.Login -> LoginScreen(
-                        onSignIn = {
-                            screen = Screen.Menu
+                // Alarm control: reset immediately on any non-exact drowsy
+                LaunchedEffect(resultText) {
+                    // Extract just the label (before space)
+                    val label = resultText.substringBefore(" ")
+                    val isDrowsy = label.equals("Drowsy", ignoreCase = true)
+                    val now = System.currentTimeMillis()
+
+                    if (isDrowsy) {
+                        if (drowsyStartTime == null) {
+                            drowsyStartTime = now
+                        } else if (now - drowsyStartTime!! > 5000) {
+                            mediaPlayer?.start()
                         }
-                    )
-                    is Screen.Menu -> MenuScreen {
-                        isAuto = true
-                        screen = Screen.Detection
+                    } else {
+                        // Immediately reset on non-Drowsy
+                        drowsyStartTime = null
+                        mediaPlayer?.let {
+                            if (it.isPlaying) {
+                                it.pause()
+                                it.seekTo(0)
+                            }
+                        }
                     }
+                }
+
+                // Navigation
+                when (screen) {
+                    is Screen.Login -> LoginScreen(onSignIn = { screen = Screen.Menu })
+                    is Screen.Menu -> MenuScreen { isAuto = true; screen = Screen.Detection }
                     is Screen.Detection -> DetectionScreen(
-                        preview = preview,
-                        imageCapture = imageCapture,
-                        resultText = resultText,
-                        errorText = errorText,
-                        features = features,
+                        preview, imageCapture, resultText, errorText, features,
                         onEndDrive = {
                             isAuto = false
                             screen = Screen.Menu
@@ -201,7 +202,14 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer?.release()
+        mediaPlayer = null
+    }
 }
+
 
 @Composable
 fun LoginScreen(onSignIn: () -> Unit) {

@@ -20,7 +20,7 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 
 object ApiClient {
     private val client = OkHttpClient()
-    private const val BASE_URL = "http://192.168.29.140:5000/"
+    private const val BASE_URL = "http://192.168.213.63:5000/"
 
     suspend fun sendBitmapToServer(bitmap: Bitmap): PredictionResult? = withContext(Dispatchers.IO) {
         // 1) compress to JPEG
