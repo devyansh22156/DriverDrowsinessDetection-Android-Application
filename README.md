@@ -97,7 +97,7 @@ private const val BASE_URL = "http://192.168.1.5:5000/"
 ## 📈 Model Details
 
 - **Spatial Feature Extractor**: Pretrained EfficientNet-B0 (ImageNet weights).
-- **fine-tuned model weights**: https://drive.google.com/file/d/1gO5yMIWkIXpJ8abINwDpvyhF6pEXJJEz/view?usp=sharing
+- **Fine-Tuned model weights**: https://drive.google.com/file/d/1gO5yMIWkIXpJ8abINwDpvyhF6pEXJJEz/view?usp=sharing
 - **Temporal Feature Model**: Gated Recurrent Unit (GRU) layer on extracted spatial features.
 - **Training**:
   - Optimizer: Adam
